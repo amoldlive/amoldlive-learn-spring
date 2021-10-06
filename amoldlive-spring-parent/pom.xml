@@ -7,5 +7,6 @@
   
   <modules>
   	<module>spring-data-jpa</module>
+  	<module>spring-data-jpa-2</module>
   </modules>
 </project>
