@@ -1,4 +1,4 @@
-package com.data.entity;
+package com.data.jpa.em;
 
 import java.util.Date;
 
@@ -7,10 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Person")
+@NamedQuery(name = "find_all_persons" , query = "select p from Person p")
 public class Person {
 
 	@Id
@@ -31,9 +33,8 @@ public class Person {
 		super();
 	}
 
-	public Person(int id, String name, String location, Date birth_date) {
+	public Person(String name, String location, Date birth_date) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.location = location;
 		this.birth_date = birth_date;
