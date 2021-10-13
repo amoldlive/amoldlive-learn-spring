@@ -1,4 +1,4 @@
-package com.data.repository;
+package com.data.dao.entitymanager;
 
 import com.data.entity.Student;
 
